@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "3f468822-a3a1-4dc5-a41d-32d936119e61",
+		"name": "flyaway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26612576"
+	},
+	"item": [
+		{
+			"name": "bookings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8002/FlyAway/memberbookings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"FlyAway",
+						"memberbookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8002/{{endpoint1}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"{{endpoint1}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
